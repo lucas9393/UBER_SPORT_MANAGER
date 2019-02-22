@@ -1,0 +1,14 @@
+C:\Users\Allievo 6\Documents\GitHub\UBER_SPORT_MANAGER\USM_Main_Test\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\Allievo 6\Documents\GitHub\UBER_SPORT_MANAGER\USM_Main_Test\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\Allievo 6\Documents\GitHub\UBER_SPORT_MANAGER\USM_Main_Test\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\Users\Allievo 6\Documents\GitHub\UBER_SPORT_MANAGER\USM_Main_Test\bin\Debug\netcoreapp2.1\USM_Main_Test.deps.json
+C:\Users\Allievo 6\Documents\GitHub\UBER_SPORT_MANAGER\USM_Main_Test\bin\Debug\netcoreapp2.1\USM_Main_Test.runtimeconfig.json
+C:\Users\Allievo 6\Documents\GitHub\UBER_SPORT_MANAGER\USM_Main_Test\bin\Debug\netcoreapp2.1\USM_Main_Test.runtimeconfig.dev.json
+C:\Users\Allievo 6\Documents\GitHub\UBER_SPORT_MANAGER\USM_Main_Test\bin\Debug\netcoreapp2.1\USM_Main_Test.dll
+C:\Users\Allievo 6\Documents\GitHub\UBER_SPORT_MANAGER\USM_Main_Test\bin\Debug\netcoreapp2.1\USM_Main_Test.pdb
+C:\Users\Allievo 6\Documents\GitHub\UBER_SPORT_MANAGER\USM_Main_Test\obj\Debug\netcoreapp2.1\USM_Main_Test.csprojAssemblyReference.cache
+C:\Users\Allievo 6\Documents\GitHub\UBER_SPORT_MANAGER\USM_Main_Test\obj\Debug\netcoreapp2.1\USM_Main_Test.csproj.CoreCompileInputs.cache
+C:\Users\Allievo 6\Documents\GitHub\UBER_SPORT_MANAGER\USM_Main_Test\obj\Debug\netcoreapp2.1\USM_Main_Test.AssemblyInfoInputs.cache
+C:\Users\Allievo 6\Documents\GitHub\UBER_SPORT_MANAGER\USM_Main_Test\obj\Debug\netcoreapp2.1\USM_Main_Test.AssemblyInfo.cs
+C:\Users\Allievo 6\Documents\GitHub\UBER_SPORT_MANAGER\USM_Main_Test\obj\Debug\netcoreapp2.1\USM_Main_Test.dll
+C:\Users\Allievo 6\Documents\GitHub\UBER_SPORT_MANAGER\USM_Main_Test\obj\Debug\netcoreapp2.1\USM_Main_Test.pdb

@@ -1,0 +1,9 @@
+C:\Users\Allievo 6\Documents\GitHub\UBER_SPORT_MANAGER\USM_EF_Helper\bin\Debug\netcoreapp2.1\USM_EF_Helper.deps.json
+C:\Users\Allievo 6\Documents\GitHub\UBER_SPORT_MANAGER\USM_EF_Helper\bin\Debug\netcoreapp2.1\USM_EF_Helper.dll
+C:\Users\Allievo 6\Documents\GitHub\UBER_SPORT_MANAGER\USM_EF_Helper\bin\Debug\netcoreapp2.1\USM_EF_Helper.pdb
+C:\Users\Allievo 6\Documents\GitHub\UBER_SPORT_MANAGER\USM_EF_Helper\obj\Debug\netcoreapp2.1\USM_EF_Helper.csprojAssemblyReference.cache
+C:\Users\Allievo 6\Documents\GitHub\UBER_SPORT_MANAGER\USM_EF_Helper\obj\Debug\netcoreapp2.1\USM_EF_Helper.csproj.CoreCompileInputs.cache
+C:\Users\Allievo 6\Documents\GitHub\UBER_SPORT_MANAGER\USM_EF_Helper\obj\Debug\netcoreapp2.1\USM_EF_Helper.AssemblyInfoInputs.cache
+C:\Users\Allievo 6\Documents\GitHub\UBER_SPORT_MANAGER\USM_EF_Helper\obj\Debug\netcoreapp2.1\USM_EF_Helper.AssemblyInfo.cs
+C:\Users\Allievo 6\Documents\GitHub\UBER_SPORT_MANAGER\USM_EF_Helper\obj\Debug\netcoreapp2.1\USM_EF_Helper.dll
+C:\Users\Allievo 6\Documents\GitHub\UBER_SPORT_MANAGER\USM_EF_Helper\obj\Debug\netcoreapp2.1\USM_EF_Helper.pdb

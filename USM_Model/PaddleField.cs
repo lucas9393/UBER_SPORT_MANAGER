@@ -4,10 +4,10 @@
     {
 
 
-        public PaddleField(string name, TerrainType type, decimal price)
+        public PaddleField(string name, TerrainType terrainType, decimal price)
         {
             Name = name;
-            Terrain = type;
+            Terrain = terrainType;
             Sport = SportType.Paddle;
             Price = price;
         }
