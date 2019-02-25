@@ -18,7 +18,7 @@ namespace USM_Model
             ATeam = new List<Member>();
             ATeam.Add(Challenger);
             BTeam = new List<Member>();
-            AvailableMembers = availableMembers;
+            AvailableMembers = availableMembers-1;
         }
 
         public void AddPlayer(Member member)

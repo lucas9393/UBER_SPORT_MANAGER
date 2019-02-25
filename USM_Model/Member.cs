@@ -4,15 +4,17 @@ namespace USM_Model
 {
     public class Member
     {
-        public string Nome { get; set; }
-        public string Cognome { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
         public string Address { get; set; }
-        public DateTime Dob { get; set; }
+        public DateTime DateOfBirth { get; set; }
+        public DateTime DateOfRegistration { get; set; }
 
-        public Member(string nome, string cognome)
+        public Member(string nome, string cognome, DateTime dor)
         {
-            Nome = nome;
-            Cognome = cognome;
+            Name = nome;
+            Surname = cognome;
+            DateOfRegistration = dor;
         }
     }
 }
