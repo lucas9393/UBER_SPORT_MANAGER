@@ -3,6 +3,9 @@
     public class SoccerField : Field
     {
         public bool IsSeven { get; set; }
+
+        public SoccerField() { }
+
         public SoccerField(string name, TerrainType terrainType, decimal price, bool isSeven)
         {
             Name = name;

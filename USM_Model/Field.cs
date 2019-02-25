@@ -2,6 +2,7 @@
 {
     public abstract class Field
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public TerrainType Terrain { get; set; }
         public SportType Sport { get; set; }

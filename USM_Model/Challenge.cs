@@ -7,10 +7,14 @@ namespace USM_Model
 {
     public class Challenge
     {
+        public int Id { get; set; }
+        public int MemberId { get; set; }
         public Member Challenger { get; set; }
         public List<Member> ATeam { get; set; }
         public List<Member> BTeam { get; set; }
         public int AvailableMembers { get; set; }
+
+        public Challenge() { }
 
         public Challenge(Member challenger, int availableMembers)
         {

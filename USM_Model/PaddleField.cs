@@ -2,6 +2,8 @@
 {
     public class PaddleField : Field
     {
+        public PaddleField() { }
+
         public PaddleField(string name, TerrainType terrainType, decimal price)
         {
             Name = name;

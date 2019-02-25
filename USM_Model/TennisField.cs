@@ -2,6 +2,7 @@
 {
     public class TennisField : Field
     {
+        public TennisField() { }
   
         public TennisField(string name, TerrainType terrainType, decimal price)
         {
