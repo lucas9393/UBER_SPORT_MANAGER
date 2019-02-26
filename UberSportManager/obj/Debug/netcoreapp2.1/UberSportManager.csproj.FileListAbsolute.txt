@@ -26,3 +26,6 @@ C:\Users\Allievo 5\Documents\GitHub\UBER_SPORT_MANAGER\UberSportManager\obj\Debu
 C:\Users\Allievo 5\Documents\GitHub\UBER_SPORT_MANAGER\UberSportManager\obj\Debug\netcoreapp2.1\UberSportManager.RazorTargetAssemblyInfo.cache
 C:\Users\Allievo 5\Documents\GitHub\UBER_SPORT_MANAGER\UberSportManager\obj\Debug\netcoreapp2.1\UberSportManager.dll
 C:\Users\Allievo 5\Documents\GitHub\UBER_SPORT_MANAGER\UberSportManager\obj\Debug\netcoreapp2.1\UberSportManager.pdb
+C:\Users\Allievo 5\Documents\GitHub\UBER_SPORT_MANAGER\UberSportManager\bin\Debug\netcoreapp2.1\USM_Model.dll
+C:\Users\Allievo 5\Documents\GitHub\UBER_SPORT_MANAGER\UberSportManager\bin\Debug\netcoreapp2.1\USM_Model.pdb
+C:\Users\Allievo 5\Documents\GitHub\UBER_SPORT_MANAGER\UberSportManager\obj\Debug\netcoreapp2.1\UberSportManager.csproj.CopyComplete

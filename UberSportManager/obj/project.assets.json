@@ -4641,6 +4641,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "USM_Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/USM_Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/USM_Model.dll": {}
+        }
       }
     }
   },
@@ -12573,6 +12583,11 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "USM_Model/1.0.0": {
+      "type": "project",
+      "path": "../USM_Model/USM_Model.csproj",
+      "msbuildProject": "../USM_Model/USM_Model.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -12580,7 +12595,8 @@
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 6.0.0",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.NETCore.App >= 2.1.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.1"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.1",
+      "USM_Model >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12612,7 +12628,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Allievo 5\\Documents\\GitHub\\UBER_SPORT_MANAGER\\USM_Model\\USM_Model.csproj": {
+              "projectPath": "C:\\Users\\Allievo 5\\Documents\\GitHub\\UBER_SPORT_MANAGER\\USM_Model\\USM_Model.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

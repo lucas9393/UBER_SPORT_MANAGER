@@ -9,6 +9,7 @@
       "USM_EF_Helper/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "2.2.2",
+          "Microsoft.EntityFrameworkCore.Design": "2.2.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.2",
           "Microsoft.EntityFrameworkCore.Tools": "2.2.2",
           "USM_Model": "1.0.0"
