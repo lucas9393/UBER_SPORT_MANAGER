@@ -12,3 +12,17 @@ C:\Users\Allievo 6\Documents\GitHub\UBER_SPORT_MANAGER\UberSportManager\obj\Debu
 C:\Users\Allievo 6\Documents\GitHub\UBER_SPORT_MANAGER\UberSportManager\obj\Debug\netcoreapp2.1\UberSportManager.RazorTargetAssemblyInfo.cache
 C:\Users\Allievo 6\Documents\GitHub\UBER_SPORT_MANAGER\UberSportManager\obj\Debug\netcoreapp2.1\UberSportManager.dll
 C:\Users\Allievo 6\Documents\GitHub\UBER_SPORT_MANAGER\UberSportManager\obj\Debug\netcoreapp2.1\UberSportManager.pdb
+C:\Users\Allievo 5\Documents\GitHub\UBER_SPORT_MANAGER\UberSportManager\bin\Debug\netcoreapp2.1\UberSportManager.deps.json
+C:\Users\Allievo 5\Documents\GitHub\UBER_SPORT_MANAGER\UberSportManager\bin\Debug\netcoreapp2.1\UberSportManager.runtimeconfig.json
+C:\Users\Allievo 5\Documents\GitHub\UBER_SPORT_MANAGER\UberSportManager\bin\Debug\netcoreapp2.1\UberSportManager.runtimeconfig.dev.json
+C:\Users\Allievo 5\Documents\GitHub\UBER_SPORT_MANAGER\UberSportManager\bin\Debug\netcoreapp2.1\UberSportManager.dll
+C:\Users\Allievo 5\Documents\GitHub\UBER_SPORT_MANAGER\UberSportManager\bin\Debug\netcoreapp2.1\UberSportManager.pdb
+C:\Users\Allievo 5\Documents\GitHub\UBER_SPORT_MANAGER\UberSportManager\obj\Debug\netcoreapp2.1\UberSportManager.csprojAssemblyReference.cache
+C:\Users\Allievo 5\Documents\GitHub\UBER_SPORT_MANAGER\UberSportManager\obj\Debug\netcoreapp2.1\UberSportManager.csproj.CoreCompileInputs.cache
+C:\Users\Allievo 5\Documents\GitHub\UBER_SPORT_MANAGER\UberSportManager\obj\Debug\netcoreapp2.1\UberSportManager.RazorAssemblyInfo.cache
+C:\Users\Allievo 5\Documents\GitHub\UBER_SPORT_MANAGER\UberSportManager\obj\Debug\netcoreapp2.1\UberSportManager.RazorAssemblyInfo.cs
+C:\Users\Allievo 5\Documents\GitHub\UBER_SPORT_MANAGER\UberSportManager\obj\Debug\netcoreapp2.1\UberSportManager.AssemblyInfoInputs.cache
+C:\Users\Allievo 5\Documents\GitHub\UBER_SPORT_MANAGER\UberSportManager\obj\Debug\netcoreapp2.1\UberSportManager.AssemblyInfo.cs
+C:\Users\Allievo 5\Documents\GitHub\UBER_SPORT_MANAGER\UberSportManager\obj\Debug\netcoreapp2.1\UberSportManager.RazorTargetAssemblyInfo.cache
+C:\Users\Allievo 5\Documents\GitHub\UBER_SPORT_MANAGER\UberSportManager\obj\Debug\netcoreapp2.1\UberSportManager.dll
+C:\Users\Allievo 5\Documents\GitHub\UBER_SPORT_MANAGER\UberSportManager\obj\Debug\netcoreapp2.1\UberSportManager.pdb
