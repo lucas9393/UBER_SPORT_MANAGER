@@ -31,8 +31,8 @@ namespace UberSportManager.Controllers
                 Field campo2 = new PaddleField(name: "pluto", terrainType: TerrainType.Grass, price: 70.00m);
                 Field campo3 = new SoccerField(name: "paperino", terrainType: TerrainType.Grass, price: 70.00m, isSeven: true);
 
-                Member user1 = new Member(nome: "Luca", cognome: "Vaccaro", dor: DateTime.Now);
-                Member user2 = new Member(nome: "Gianluca", cognome: "Marino", dor: DateTime.Now);
+                Member user1 = new Member(name: "Luca", surname: "Vaccaro", dor: DateTime.Now);
+                Member user2 = new Member(name: "Gianluca", surname: "Marino", dor: DateTime.Now);
 
 
                 Reservation reservation1 = new Reservation(field: campo1, member: user1, date: DateTime.Now, isDouble: false);
@@ -53,8 +53,8 @@ namespace UberSportManager.Controllers
             }
         }
 
-        [HttpGet("{nomeCampo}")]
-        public ActionResult<ReservationDTO> Get(string nomeCampo)
+        [HttpGet("{fieldName}")]
+        public ActionResult<ReservationDTO> Get(string fieldName)
         {
             try
             {
@@ -63,8 +63,8 @@ namespace UberSportManager.Controllers
                 Field campo2 = new PaddleField(name: "pluto", terrainType: TerrainType.Grass, price: 70.00m);
                 Field campo3 = new SoccerField(name: "paperino", terrainType: TerrainType.Grass, price: 70.00m, isSeven: true);
 
-                Member user1 = new Member(nome: "Luca", cognome: "Vaccaro", dor: DateTime.Now);
-                Member user2 = new Member(nome: "Gianluca", cognome: "Marino", dor: DateTime.Now);
+                Member user1 = new Member(name: "Luca", surname: "Vaccaro", dor: DateTime.Now);
+                Member user2 = new Member(name: "Gianluca", surname: "Marino", dor: DateTime.Now);
 
 
                 Reservation reservation1 = new Reservation(field: campo1, member: user1, date: DateTime.Now, isDouble: false);
@@ -78,7 +78,7 @@ namespace UberSportManager.Controllers
                 };
 
 
-                var result = results.Where(r => r.Field.Name == nomeCampo).First();
+                var result = results.Where(r => r.Field.Name == fieldName).First();
 
                 if (result == null) return NotFound();
 
@@ -92,7 +92,7 @@ namespace UberSportManager.Controllers
         }
 
         [HttpGet("search")]
-        public ActionResult<ReservationDTO[]> SearchByDate(string nomeUtente)
+        public ActionResult<ReservationDTO[]> SearchByDate(string username)
         {
             try
             {
@@ -100,8 +100,8 @@ namespace UberSportManager.Controllers
                 Field campo2 = new PaddleField(name: "pluto", terrainType: TerrainType.Grass, price: 70.00m);
                 Field campo3 = new SoccerField(name: "paperino", terrainType: TerrainType.Grass, price: 70.00m, isSeven: true);
 
-                Member user1 = new Member(nome: "Luca", cognome: "Vaccaro", dor: DateTime.Now);
-                Member user2 = new Member(nome: "Gianluca", cognome: "Marino", dor: DateTime.Now);
+                Member user1 = new Member(name: "Luca", surname: "Vaccaro", dor: DateTime.Now);
+                Member user2 = new Member(name: "Gianluca", surname: "Marino", dor: DateTime.Now);
 
 
                 Reservation reservation1 = new Reservation(field: campo1, member: user1, date: DateTime.Now, isDouble: false);
@@ -115,7 +115,7 @@ namespace UberSportManager.Controllers
                 };
 
 
-                var result1 = results.Where(r => r.Member.Name.Contains(nomeUtente));
+                var result1 = results.Where(r => r.Member.Name.Contains(username));
                 
 
                 if (!result1.Any()) return NotFound();

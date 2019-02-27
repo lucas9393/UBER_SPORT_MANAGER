@@ -26,7 +26,7 @@ namespace USM_Model_Test
         public void Test_User_Constructors()
         {
 
-            Member user1 = new Member(nome: "Luca", cognome: "Vaccaro", dor: DateTime.Now);
+            Member user1 = new Member(name: "Luca", surname: "Vaccaro", dor: DateTime.Now);
 
             Assert.IsType<Member>(user1);
 
@@ -35,7 +35,7 @@ namespace USM_Model_Test
         [Fact]
         public void Test_Challenge_Creation()
         {
-            Member user1 = new Member(nome: "Luca", cognome: "Vaccaro", dor: DateTime.Now);
+            Member user1 = new Member(name: "Luca", surname: "Vaccaro", dor: DateTime.Now);
 
             Challenge challenge1 = new Challenge(challenger: user1, availableMembers: 13);
 
@@ -48,8 +48,8 @@ namespace USM_Model_Test
         [Fact]
         public void Test_Challenge_Add_Player()
         {
-            Member user1 = new Member(nome: "Luca", cognome: "Vaccaro", dor: DateTime.Now);
-            Member user2 = new Member(nome: "Gianluca", cognome: "Marino", dor: DateTime.Now);
+            Member user1 = new Member(name: "Luca", surname: "Vaccaro", dor: DateTime.Now);
+            Member user2 = new Member(name: "Gianluca", surname: "Marino", dor: DateTime.Now);
 
             Challenge challenge1 = new Challenge(challenger: user1, availableMembers: 13);
 
@@ -64,7 +64,7 @@ namespace USM_Model_Test
         [Fact]
         public void Test_Reservation_Constructor()
         {
-            Member user1 = new Member(nome: "Luca", cognome: "Vaccaro", dor: DateTime.Now);
+            Member user1 = new Member(name: "Luca", surname: "Vaccaro", dor: DateTime.Now);
             Field campo1 = new TennisField(name: "pippo", terrainType: TerrainType.Grass, price: 70.00m);
 
             Reservation reservation1 = new Reservation(field: campo1, member: user1, date: DateTime.Now, isDouble: false);
@@ -75,7 +75,7 @@ namespace USM_Model_Test
         [Fact]
         public void Test_Reservation_Get_Price()
         {
-            Member user1 = new Member(nome: "Luca", cognome: "Vaccaro", dor: DateTime.Now);
+            Member user1 = new Member(name: "Luca", surname: "Vaccaro", dor: DateTime.Now);
             Field campo1 = new TennisField(name: "pippo", terrainType: TerrainType.Grass, price: 70.00m);
 
             Reservation reservation1 = new Reservation(field: campo1, member: user1, date: DateTime.Now, isDouble: false);
@@ -90,7 +90,7 @@ namespace USM_Model_Test
         [Fact]
         public void Test_Get_Max_Player()
         {
-            Member user1 = new Member(nome: "Luca", cognome: "Vaccaro", dor: DateTime.Now);
+            Member user1 = new Member(name: "Luca", surname: "Vaccaro", dor: DateTime.Now);
             Field campo3 = new SoccerField(name: "pippo", terrainType: TerrainType.Grass, price: 70.00m, isSeven: true);
             Field campo1 = new TennisField(name: "pippo", terrainType: TerrainType.Grass, price: 70.00m);
             Reservation reservation1 = new Reservation(field: campo1, member: user1, date: DateTime.Now, isDouble: false);
@@ -110,8 +110,8 @@ namespace USM_Model_Test
         {
             Mock<IUnitOfWork> mockUnitOfWork = new Mock<IUnitOfWork>();
             mockUnitOfWork.Setup(m => m.Members).Returns(new Member[] {
-                new Member(nome: "Luca", cognome: "Vaccaro", dor: DateTime.Now),
-                new Member(nome: "Gianluca", cognome: "Marino", dor: DateTime.Now)
+                new Member(name: "Luca", surname: "Vaccaro", dor: DateTime.Now),
+                new Member(name: "Gianluca", surname: "Marino", dor: DateTime.Now)
             });
 
             IUnitOfWork unitOfWork = mockUnitOfWork.Object;

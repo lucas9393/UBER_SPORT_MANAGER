@@ -13,6 +13,7 @@ namespace USM_EF_Helper
         public DbSet<Field> Fields { get; set; }
         public DbSet<Challenge> Challenges { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
+        public DbSet<MembersChallenges> MembersChallenges { get; set; }
 
         public EFDBContext(DbContextOptions<EFDBContext> options) : base(options) { }
 
@@ -23,7 +24,43 @@ namespace USM_EF_Helper
                 .HasValue<TennisField>((int)SportType.Tennis)
                 .HasValue<PaddleField>((int)SportType.Paddle)
                 .HasValue<SoccerField>((int)SportType.Soccer);
-            
+
+            modelBuilder.Entity<MembersChallenges>()
+                .HasKey(mc => new { mc.MemberId, mc.ChallengeId });
+
+            modelBuilder.Entity<MembersChallenges>()
+                .HasOne(mc => mc.Member)
+                .WithMany(m => m.MembersChallenges)
+                .HasForeignKey(mc => mc.MemberId);
+                
+
+            modelBuilder.Entity<MembersChallenges>()
+                .HasOne(mc => mc.Challenge)
+                .WithMany(c => c.MembersChallenges)
+                .HasForeignKey(mc => mc.ChallengeId);
+                
+            modelBuilder.Entity<Reservation>()
+                .HasOne(r => r.Field)
+                .WithMany(f => f.Reservations)
+                .IsRequired();
+
+            modelBuilder.Entity<Reservation>()
+                .HasOne(r => r.Member) //Reservations ha un Member
+                .WithMany(m => m.Reservations) //e un Member ha molte Reservations
+                .IsRequired();//OnDelete(DeleteBehavior.Restrict);
+
+
+            //modelBuilder.Entity<Reservation>()
+            //    .HasOne(r => r.Challenge) //ha una relazione uno a unocon challenge
+            //    .WithOne(c => c.Reservation) //e challenge ha una relazione uno a uno con Reservations
+            //    .HasForeignKey<Reservation>(r => r.ChallengeId);
+
+            modelBuilder.Entity<Challenge>()
+                .HasOne(c => c.Reservation)
+                .WithOne(r => r.Challenge)
+                .HasForeignKey<Challenge>(c => c.ReservationId)
+                .IsRequired().OnDelete(DeleteBehavior.ClientSetNull);
+
         }
 
     }

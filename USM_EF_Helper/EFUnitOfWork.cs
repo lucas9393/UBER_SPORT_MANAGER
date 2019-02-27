@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using USM_Model;
 using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 
 namespace USM_EF_Helper
 {
@@ -17,7 +18,7 @@ namespace USM_EF_Helper
             Context = context;
         }
 
-        public IEnumerable<Member> Members { get => MemberRepository.Members;}
+   
         //public IEnumerable<Field> Fields { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public bool AddMember(Member member)
@@ -40,14 +41,29 @@ namespace USM_EF_Helper
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Member> SearchMemberByName(string name)
+        public async Task<Member[]> SearchMemberByString(string queryString)
         {
-            throw new NotImplementedException();
+            return await MemberRepository.SearchMemberByString(queryString);
         }
 
         public IEnumerable<Member> SortedMembers(MemberSortingType sortingType)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<Member[]> AllMembers()
+        {
+           return await MemberRepository.AllMembers();
+        }
+
+        public async Task<Member[]> SearchMemberByAgeRange(int startAge, int endAge)
+        {
+            return await MemberRepository.SearchMembersByAgeRange(startAge, endAge);
+        }
+
+        public async Task<Member[]> SearchMemberByDateOfRegistration(DateTime startDate, DateTime endDate)
+        {
+            return await MemberRepository.SearchMemberByDateOfRegistration(startDate, endDate);
         }
     }
 }

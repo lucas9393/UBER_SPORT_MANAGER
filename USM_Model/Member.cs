@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace USM_Model
 {
@@ -10,14 +11,30 @@ namespace USM_Model
         public string Address { get; set; }
         public DateTime? DateOfBirth { get; set; }
         public DateTime? DateOfRegistration { get; set; }
+        public ICollection<MembersChallenges> MembersChallenges { get; set; }
+        public ICollection<Reservation> Reservations { get; set; }
 
         public Member() { }
 
-        public Member(string nome, string cognome, DateTime dor)
+        public Member(string name, string surname, DateTime dor)
         {
-            Name = nome;
-            Surname = cognome;
+            Name = name;
+            Surname = surname;
             DateOfRegistration = dor;
         }
+
+
+        public int? GetAge()
+        {
+            if (DateOfBirth == null)
+            {
+                return null;
+            }
+            var today = DateTime.Today;
+            var age = today.Year - DateOfBirth.Value.Year;
+            if (DateOfBirth > today.AddYears(-age)) age--;
+            return age;
+        }
+
     }
 }
