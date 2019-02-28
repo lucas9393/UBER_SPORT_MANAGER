@@ -29,7 +29,21 @@ namespace USM_Model
         Task<Reservation[]> SearchReservationsByDate(DateTime startDate, DateTime endDate);
         Task<Reservation[]> SearchReservationsByField(string queryStringField);
         Task<Reservation[]> SearchReservationsByMemberName(string memberName);
+
+        // Field
+        Task<Field[]> AllFields();
+
+        bool AddField(Field field);
+        bool RemoveField(Field field);
+        Field EditField(int fieldId);
+        IEnumerable<Field> SortedFields(FieldSortingType sortingType);
+        Task<Field[]> SearchFieldByName(string fieldName);
+        Task<Field[]> SearchFieldByType(TerrainType fieldType);
+        Task<Field[]> SearchFieldBySport(SportType sportType);
+
+        // To Populate Database
         bool PopulateDB();
+        
     }
     
     public enum MemberSortingType
@@ -40,5 +54,10 @@ namespace USM_Model
     public enum ReservationSortingType
     {
         Date, Field, Member
+    }
+
+    public enum FieldSortingType
+    {
+        Type, Sport
     }
 }

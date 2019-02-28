@@ -33,7 +33,6 @@ namespace USM_EF_Helper
             throw new NotImplementedException();
         }
 
-       
         public IEnumerable<Member> SortedMembers(MemberSortingType sortingType)
         {
             throw new NotImplementedException();

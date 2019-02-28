@@ -11,6 +11,7 @@ namespace USM_EF_Helper
     {
         public IMemberRepository MemberRepository { get; set; }
         public IReservationRepository ReservationRepository { get; set; }
+        public IFieldRepository FieldRepository { get; set; }
         public EFDBContext Context;
 
         public EFUnitOfWork(IMemberRepository memberRepository, IReservationRepository reservationRepository, EFDBContext context)
@@ -22,14 +23,10 @@ namespace USM_EF_Helper
 
         //public IEnumerable<Field> Fields { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
+        // Member
         public async Task<Member[]> AllMembers()
         {
             return await MemberRepository.AllMembers();
-        }
-
-        public async Task<Reservation[]> AllReservations()
-        {
-            return await ReservationRepository.AllReservations();
         }
 
         public bool AddMember(Member member)
@@ -42,22 +39,7 @@ namespace USM_EF_Helper
             return memberAdded;
         }
 
-        public bool AddReservation(Reservation reservation)
-        {
-            bool reservationAdded = ReservationRepository.AddReservation(reservation);
-            if (reservationAdded)
-            {
-                Context.SaveChanges();
-            }
-            return reservationAdded;
-        }
-
         public bool RemoveMember(int memberId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool RemoveReservation(int reservationId)
         {
             throw new NotImplementedException();
         }
@@ -67,17 +49,7 @@ namespace USM_EF_Helper
             throw new NotImplementedException();
         }
 
-        public Reservation EditReservation(int reservationId)
-        {
-            throw new NotImplementedException();
-        }
-
         public IEnumerable<Member> SortedMembers(MemberSortingType sortingType)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Reservation> SortedReservations(ReservationSortingType sortingType)
         {
             throw new NotImplementedException();
         }
@@ -98,6 +70,37 @@ namespace USM_EF_Helper
             return await MemberRepository.SearchMemberByString(queryString);
         }
 
+        // Reservations
+        public async Task<Reservation[]> AllReservations()
+        {
+            return await ReservationRepository.AllReservations();
+        }
+
+        public bool AddReservation(Reservation reservation)
+        {
+            bool reservationAdded = ReservationRepository.AddReservation(reservation);
+            if (reservationAdded)
+            {
+                Context.SaveChanges();
+            }
+            return reservationAdded;
+        }
+
+        public bool RemoveReservation(int reservationId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Reservation EditReservation(int reservationId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Reservation> SortedReservations(ReservationSortingType sortingType)
+        {
+            throw new NotImplementedException();
+        }
+
         //Metodi di filtraggio per le reservations
         public async Task<Reservation[]> SearchReservationsByDate(DateTime startDate, DateTime endDate)
         {
@@ -114,11 +117,51 @@ namespace USM_EF_Helper
             return await ReservationRepository.SearchReservationsByMemberName(memberName);
         }
 
+        public async Task<Field[]> AllFields()
+        {
+            return await FieldRepository.AllFields();
+        }
+
+        public bool AddField(Field field)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool RemoveField(Field field)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Field EditField(int fieldId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Field> SortedFields(FieldSortingType sortingType)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Field[]> SearchFieldByName(string fieldName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Field[]> SearchFieldByType(TerrainType fieldType)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Field[]> SearchFieldBySport(SportType sportType)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool PopulateDB()
         {
-            Field campo1 = new TennisField(name: "pippo", terrainType: TerrainType.Grass, price: 70.00m);
-            Field campo2 = new PaddleField(name: "pippo", terrainType: TerrainType.Grass, price: 70.00m);
-            Field campo3 = new SoccerField(name: "pippo", terrainType: TerrainType.Grass, price: 70.00m, isSeven: true);
+            Field campo1 = new TennisField(name: "Nicoletta's Field", terrainType: TerrainType.Grass, price: 15.00m);
+            Field campo2 = new PaddleField(name: "Training Field", terrainType: TerrainType.Sinthetic, price: 42.00m);
+            Field campo3 = new SoccerField(name: "Finsa Stadium", terrainType: TerrainType.Tarmac, price: 25.00m, isSeven: true);
 
             Context.Fields.Add(campo1);
             Context.Fields.Add(campo2);
@@ -126,16 +169,19 @@ namespace USM_EF_Helper
 
             Context.SaveChanges();
 
-            Member user1 = new Member(name: "Matteo", surname: "Bianchi", dor: DateTime.Now);
-            Member user2 = new Member(name: "Alessio", surname: "Maggio", dor: DateTime.Now);
+            Member user1 = new Member(name: "Fabio", surname: "Canella", dor: DateTime.Now);
+            Member user2 = new Member(name: "Nicoletta", surname: "Magi", dor: DateTime.Now);
+            Member user3 = new Member(name: "Federico", surname: "Pessina", dor: DateTime.Now);
 
             Context.Members.Add(user1);
             Context.Members.Add(user2);
+            Context.Members.Add(user3);
 
             Context.SaveChanges();
+
             Reservation reservation1 = new Reservation(field: campo1, member: user2, date: DateTime.Now, isDouble: false);
             Reservation reservation2 = new Reservation(field: campo2, member: user1, date: DateTime.Now, isDouble: false);
-            Reservation reservation3 = new Reservation(field: campo1, member: user1, date: DateTime.Now, isDouble: false);
+            Reservation reservation3 = new Reservation(field: campo3, member: user3, date: DateTime.Now, isDouble: false);
 
             Context.Reservations.Add(reservation1);
             Context.Reservations.Add(reservation2);
