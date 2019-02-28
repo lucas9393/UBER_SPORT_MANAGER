@@ -40,3 +40,17 @@ C:\Users\Luca\Documents\GitHub\UberSportManager\USM_EF_Helper\obj\Debug\netcorea
 C:\Users\Luca\Documents\GitHub\UberSportManager\USM_EF_Helper\obj\Debug\netcoreapp2.1\USM_EF_Helper.csproj.CopyComplete
 C:\Users\Luca\Documents\GitHub\UberSportManager\USM_EF_Helper\obj\Debug\netcoreapp2.1\USM_EF_Helper.dll
 C:\Users\Luca\Documents\GitHub\UberSportManager\USM_EF_Helper\obj\Debug\netcoreapp2.1\USM_EF_Helper.pdb
+C:\Users\gianluca\Documents\GitHub\UBER_SPORT_MANAGER\USM_EF_Helper\bin\Debug\netcoreapp2.1\USM_EF_Helper.deps.json
+C:\Users\gianluca\Documents\GitHub\UBER_SPORT_MANAGER\USM_EF_Helper\bin\Debug\netcoreapp2.1\USM_EF_Helper.runtimeconfig.json
+C:\Users\gianluca\Documents\GitHub\UBER_SPORT_MANAGER\USM_EF_Helper\bin\Debug\netcoreapp2.1\USM_EF_Helper.runtimeconfig.dev.json
+C:\Users\gianluca\Documents\GitHub\UBER_SPORT_MANAGER\USM_EF_Helper\bin\Debug\netcoreapp2.1\USM_EF_Helper.dll
+C:\Users\gianluca\Documents\GitHub\UBER_SPORT_MANAGER\USM_EF_Helper\bin\Debug\netcoreapp2.1\USM_EF_Helper.pdb
+C:\Users\gianluca\Documents\GitHub\UBER_SPORT_MANAGER\USM_EF_Helper\bin\Debug\netcoreapp2.1\USM_Model.dll
+C:\Users\gianluca\Documents\GitHub\UBER_SPORT_MANAGER\USM_EF_Helper\bin\Debug\netcoreapp2.1\USM_Model.pdb
+C:\Users\gianluca\Documents\GitHub\UBER_SPORT_MANAGER\USM_EF_Helper\obj\Debug\netcoreapp2.1\USM_EF_Helper.csprojAssemblyReference.cache
+C:\Users\gianluca\Documents\GitHub\UBER_SPORT_MANAGER\USM_EF_Helper\obj\Debug\netcoreapp2.1\USM_EF_Helper.csproj.CoreCompileInputs.cache
+C:\Users\gianluca\Documents\GitHub\UBER_SPORT_MANAGER\USM_EF_Helper\obj\Debug\netcoreapp2.1\USM_EF_Helper.AssemblyInfoInputs.cache
+C:\Users\gianluca\Documents\GitHub\UBER_SPORT_MANAGER\USM_EF_Helper\obj\Debug\netcoreapp2.1\USM_EF_Helper.AssemblyInfo.cs
+C:\Users\gianluca\Documents\GitHub\UBER_SPORT_MANAGER\USM_EF_Helper\obj\Debug\netcoreapp2.1\USM_EF_Helper.csproj.CopyComplete
+C:\Users\gianluca\Documents\GitHub\UBER_SPORT_MANAGER\USM_EF_Helper\obj\Debug\netcoreapp2.1\USM_EF_Helper.dll
+C:\Users\gianluca\Documents\GitHub\UBER_SPORT_MANAGER\USM_EF_Helper\obj\Debug\netcoreapp2.1\USM_EF_Helper.pdb

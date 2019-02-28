@@ -25,3 +25,12 @@ C:\Users\Luca\Documents\GitHub\UberSportManager\USM_Model\obj\Debug\netcoreapp2.
 C:\Users\Luca\Documents\GitHub\UberSportManager\USM_Model\obj\Debug\netcoreapp2.1\USM_Model.AssemblyInfo.cs
 C:\Users\Luca\Documents\GitHub\UberSportManager\USM_Model\obj\Debug\netcoreapp2.1\USM_Model.dll
 C:\Users\Luca\Documents\GitHub\UberSportManager\USM_Model\obj\Debug\netcoreapp2.1\USM_Model.pdb
+C:\Users\gianluca\Documents\GitHub\UBER_SPORT_MANAGER\USM_Model\bin\Debug\netcoreapp2.1\USM_Model.deps.json
+C:\Users\gianluca\Documents\GitHub\UBER_SPORT_MANAGER\USM_Model\bin\Debug\netcoreapp2.1\USM_Model.dll
+C:\Users\gianluca\Documents\GitHub\UBER_SPORT_MANAGER\USM_Model\bin\Debug\netcoreapp2.1\USM_Model.pdb
+C:\Users\gianluca\Documents\GitHub\UBER_SPORT_MANAGER\USM_Model\obj\Debug\netcoreapp2.1\USM_Model.csprojAssemblyReference.cache
+C:\Users\gianluca\Documents\GitHub\UBER_SPORT_MANAGER\USM_Model\obj\Debug\netcoreapp2.1\USM_Model.csproj.CoreCompileInputs.cache
+C:\Users\gianluca\Documents\GitHub\UBER_SPORT_MANAGER\USM_Model\obj\Debug\netcoreapp2.1\USM_Model.AssemblyInfoInputs.cache
+C:\Users\gianluca\Documents\GitHub\UBER_SPORT_MANAGER\USM_Model\obj\Debug\netcoreapp2.1\USM_Model.AssemblyInfo.cs
+C:\Users\gianluca\Documents\GitHub\UBER_SPORT_MANAGER\USM_Model\obj\Debug\netcoreapp2.1\USM_Model.dll
+C:\Users\gianluca\Documents\GitHub\UBER_SPORT_MANAGER\USM_Model\obj\Debug\netcoreapp2.1\USM_Model.pdb

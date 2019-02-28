@@ -17,9 +17,10 @@ namespace UberSportManager.Controllers
         private readonly IMapper _mapper;
         public IUnitOfWork UnitOfWork { get; set; }
 
-        public ReservationsController(IMapper mapper)
+        public ReservationsController(IMapper mapper, IUnitOfWork unitOfWork)
         {          
             _mapper = mapper;
+            UnitOfWork = unitOfWork;
         }
 
         [HttpGet]
@@ -53,12 +54,12 @@ namespace UberSportManager.Controllers
         }
 
 
-        [HttpGet("searchByMember")]
-        public async Task<ActionResult<ReservationDTO[]>> GetReservaitonByMember(string queryStringMember)
+        [HttpGet("SearchByMemberName")]
+        public async Task<ActionResult<ReservationDTO[]>> GetByMemberName(string memberName)
         {
             try
             {
-                var result = await UnitOfWork.SearchReservationsByMember(queryStringMember);
+                var result = await UnitOfWork.SearchReservationsByMemberName(memberName);
                 if (result == null) return NotFound();
                 return _mapper.Map<ReservationDTO[]>(result);
             }

@@ -54,9 +54,9 @@ namespace USM_EF_Helper
             return await Reservations.Where(r => r.Field.Name.Contains(queryStringField)).ToArrayAsync();
         }
 
-        public async Task<Reservation[]> SearchReservationsByMember(string queryStringMember)
+        public async Task<Reservation[]> SearchReservationsByMemberName(string memberName)
         {
-            return await Reservations.Where(r => r.Member.Surname.Contains(queryStringMember) || r.Member.Name.Contains(queryStringMember)).ToArrayAsync();
+            return await Reservations.Where(r => r.Member.Surname.Contains(memberName) || r.Member.Name.Contains(memberName)).ToArrayAsync();
         }
      
     }

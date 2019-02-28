@@ -46,3 +46,5 @@ C:\Users\Luca\Documents\GitHub\UberSportManager\UberSportManager\obj\Debug\netco
 C:\Users\Luca\Documents\GitHub\UberSportManager\UberSportManager\obj\Debug\netcoreapp2.1\UberSportManager.csproj.CopyComplete
 C:\Users\Luca\Documents\GitHub\UberSportManager\UberSportManager\obj\Debug\netcoreapp2.1\UberSportManager.dll
 C:\Users\Luca\Documents\GitHub\UberSportManager\UberSportManager\obj\Debug\netcoreapp2.1\UberSportManager.pdb
+C:\Users\gianluca\Documents\GitHub\UBER_SPORT_MANAGER\UberSportManager\obj\Debug\netcoreapp2.1\UberSportManager.dll
+C:\Users\gianluca\Documents\GitHub\UBER_SPORT_MANAGER\UberSportManager\obj\Debug\netcoreapp2.1\UberSportManager.pdb

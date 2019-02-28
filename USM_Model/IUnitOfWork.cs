@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace USM_Model
 {
     public interface IUnitOfWork
@@ -27,10 +28,10 @@ namespace USM_Model
         IEnumerable<Reservation> SortedReservations(ReservationSortingType sortingType);
         Task<Reservation[]> SearchReservationsByDate(DateTime startDate, DateTime endDate);
         Task<Reservation[]> SearchReservationsByField(string queryStringField);
-        Task<Reservation[]> SearchReservationsByMember(string queryStringMember);
-
+        Task<Reservation[]> SearchReservationsByMemberName(string memberName);
+        bool PopulateDB();
     }
-
+    
     public enum MemberSortingType
     {
         Surname, DorAscending, DorDescending

@@ -11,15 +11,14 @@ namespace USM_EF_Helper
     {
         public IMemberRepository MemberRepository { get; set; }
         public IReservationRepository ReservationRepository { get; set; }
-        public DbContext Context;
+        public EFDBContext Context;
 
-        public EFUnitOfWork(IMemberRepository memberRepository, IReservationRepository reservationRepository, DbContext context)
+        public EFUnitOfWork(IMemberRepository memberRepository, IReservationRepository reservationRepository, EFDBContext context)
         {
             MemberRepository = memberRepository;
             ReservationRepository = reservationRepository;
             Context = context;
         }
-
 
         //public IEnumerable<Field> Fields { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
@@ -32,7 +31,6 @@ namespace USM_EF_Helper
         {
             return await ReservationRepository.AllReservations();
         }
-
 
         public bool AddMember(Member member)
         {
@@ -54,7 +52,6 @@ namespace USM_EF_Helper
             return reservationAdded;
         }
 
-
         public bool RemoveMember(int memberId)
         {
             throw new NotImplementedException();
@@ -64,7 +61,6 @@ namespace USM_EF_Helper
         {
             throw new NotImplementedException();
         }
-
 
         public Member EditMember(int memberId)
         {
@@ -76,7 +72,6 @@ namespace USM_EF_Helper
             throw new NotImplementedException();
         }
 
-
         public IEnumerable<Member> SortedMembers(MemberSortingType sortingType)
         {
             throw new NotImplementedException();
@@ -86,7 +81,6 @@ namespace USM_EF_Helper
         {
             throw new NotImplementedException();
         }
-
 
         //Metodi di filtraggio per i members
         public async Task<Member[]> SearchMemberByDateOfRegistration(DateTime startDate, DateTime endDate)
@@ -104,7 +98,6 @@ namespace USM_EF_Helper
             return await MemberRepository.SearchMemberByString(queryString);
         }
 
-
         //Metodi di filtraggio per le reservations
         public async Task<Reservation[]> SearchReservationsByDate(DateTime startDate, DateTime endDate)
         {
@@ -116,10 +109,47 @@ namespace USM_EF_Helper
             return await ReservationRepository.SearchReservationsByField(queryStringField);
         }
 
-        public async Task<Reservation[]> SearchReservationsByMember(string queryStringMember)
+        public async Task<Reservation[]> SearchReservationsByMemberName(string memberName)
         {
-            return await ReservationRepository.SearchReservationsByMember(queryStringMember);
+            return await ReservationRepository.SearchReservationsByMemberName(memberName);
         }
 
+        public bool PopulateDB()
+        {
+            Field campo1 = new TennisField(name: "pippo", terrainType: TerrainType.Grass, price: 70.00m);
+            Field campo2 = new PaddleField(name: "pippo", terrainType: TerrainType.Grass, price: 70.00m);
+            Field campo3 = new SoccerField(name: "pippo", terrainType: TerrainType.Grass, price: 70.00m, isSeven: true);
+
+            Context.Fields.Add(campo1);
+            Context.Fields.Add(campo2);
+            Context.Fields.Add(campo3);
+
+            Context.SaveChanges();
+
+            Member user1 = new Member(name: "Matteo", surname: "Bianchi", dor: DateTime.Now);
+            Member user2 = new Member(name: "Alessio", surname: "Maggio", dor: DateTime.Now);
+
+            Context.Members.Add(user1);
+            Context.Members.Add(user2);
+
+            Context.SaveChanges();
+            Reservation reservation1 = new Reservation(field: campo1, member: user2, date: DateTime.Now, isDouble: false);
+            Reservation reservation2 = new Reservation(field: campo2, member: user1, date: DateTime.Now, isDouble: false);
+            Reservation reservation3 = new Reservation(field: campo1, member: user1, date: DateTime.Now, isDouble: false);
+
+            Context.Reservations.Add(reservation1);
+            Context.Reservations.Add(reservation2);
+            Context.Reservations.Add(reservation3);
+
+            try
+            {
+                Context.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }

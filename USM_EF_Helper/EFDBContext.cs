@@ -70,7 +70,7 @@ namespace USM_EF_Helper
         public EFDBContext CreateDbContext(string[] args)
         {
             var optionBuilder = new DbContextOptionsBuilder<EFDBContext>();
-            optionBuilder.UseSqlServer(@"Data Source=LAPTOP-2N0J4TUT;Initial Catalog=USMDataBase;Integrated Security=True; MultipleActiveResultSets=true");
+            optionBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=USMDataBase;Integrated Security=True;MultipleActiveResultSets=true");
             return new EFDBContext(optionBuilder.Options);
         }
     }
