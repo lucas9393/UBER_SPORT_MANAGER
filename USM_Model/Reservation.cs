@@ -27,45 +27,7 @@ namespace USM_Model
         }
 
         public decimal Price() => IsDouble ? Field.Price * 1.25m : Field.Price;
-        //{
-        //    if(IsDouble)
-        //    {
-        //        return Field.Price* 1.25m;
-        //    }
-        //    else
-        //    {
-        //        return Field.Price;
-        //    }
-        //}
-
         public int MaxPlayer() => IsDouble ? Field.MaxPlayer * 2 : Field.MaxPlayer;
-        //{
-        //    switch(Field)
-        //    {
-        //        case PaddleField p:
-        //            return 4;
-        //        case SoccerField s:
-        //            if(s.IsSeven)
-        //            {
-        //                return 14;
-        //            }
-        //            else
-        //            {
-        //                return 10;
-        //            }
-        //        case TennisField t:
-        //            if (IsDouble)
-        //            {
-        //                return 4;
-        //            }
-        //            else
-        //            {
-        //                return 2;
-        //            }
-        //        default:
-        //            return -1;
-        //    }
-        //}
        
     }
 }

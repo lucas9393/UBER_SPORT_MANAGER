@@ -23,16 +23,17 @@ namespace USM_EF_Helper
             throw new NotImplementedException();
         }
 
-        public Member EditMember(int memberId)
-        {
-            throw new NotImplementedException();
-        }
-
         public bool RemoveMember(int memberId)
         {
             throw new NotImplementedException();
         }
 
+        public Member EditMember(int memberId)
+        {
+            throw new NotImplementedException();
+        }
+
+       
         public IEnumerable<Member> SortedMembers(MemberSortingType sortingType)
         {
             throw new NotImplementedException();

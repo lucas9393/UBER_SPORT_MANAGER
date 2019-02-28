@@ -10,50 +10,88 @@ namespace USM_EF_Helper
     public class EFUnitOfWork : IUnitOfWork
     {
         public IMemberRepository MemberRepository { get; set; }
+        public IReservationRepository ReservationRepository { get; set; }
         public DbContext Context;
 
-        public EFUnitOfWork(IMemberRepository memberRepository, DbContext context)
+        public EFUnitOfWork(IMemberRepository memberRepository, IReservationRepository reservationRepository, DbContext context)
         {
             MemberRepository = memberRepository;
+            ReservationRepository = reservationRepository;
             Context = context;
         }
 
-   
+
         //public IEnumerable<Field> Fields { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public async Task<Member[]> AllMembers()
+        {
+            return await MemberRepository.AllMembers();
+        }
+
+        public async Task<Reservation[]> AllReservations()
+        {
+            return await ReservationRepository.AllReservations();
+        }
+
 
         public bool AddMember(Member member)
         {
             bool memberAdded = MemberRepository.AddMember(member);
-            if(memberAdded)
+            if (memberAdded)
             {
                 Context.SaveChanges();
             }
             return memberAdded;
         }
 
-        public Member EditMember(int memberId)
+        public bool AddReservation(Reservation reservation)
         {
-            throw new NotImplementedException();
+            bool reservationAdded = ReservationRepository.AddReservation(reservation);
+            if (reservationAdded)
+            {
+                Context.SaveChanges();
+            }
+            return reservationAdded;
         }
+
 
         public bool RemoveMember(int memberId)
         {
             throw new NotImplementedException();
         }
 
-        public async Task<Member[]> SearchMemberByString(string queryString)
+        public bool RemoveReservation(int reservationId)
         {
-            return await MemberRepository.SearchMemberByString(queryString);
+            throw new NotImplementedException();
         }
+
+
+        public Member EditMember(int memberId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Reservation EditReservation(int reservationId)
+        {
+            throw new NotImplementedException();
+        }
+
 
         public IEnumerable<Member> SortedMembers(MemberSortingType sortingType)
         {
             throw new NotImplementedException();
         }
 
-        public async Task<Member[]> AllMembers()
+        public IEnumerable<Reservation> SortedReservations(ReservationSortingType sortingType)
         {
-           return await MemberRepository.AllMembers();
+            throw new NotImplementedException();
+        }
+
+
+        //Metodi di filtraggio per i members
+        public async Task<Member[]> SearchMemberByDateOfRegistration(DateTime startDate, DateTime endDate)
+        {
+            return await MemberRepository.SearchMemberByDateOfRegistration(startDate, endDate);
         }
 
         public async Task<Member[]> SearchMemberByAgeRange(int startAge, int endAge)
@@ -61,9 +99,27 @@ namespace USM_EF_Helper
             return await MemberRepository.SearchMembersByAgeRange(startAge, endAge);
         }
 
-        public async Task<Member[]> SearchMemberByDateOfRegistration(DateTime startDate, DateTime endDate)
+        public async Task<Member[]> SearchMemberByString(string queryString)
         {
-            return await MemberRepository.SearchMemberByDateOfRegistration(startDate, endDate);
+            return await MemberRepository.SearchMemberByString(queryString);
         }
+
+
+        //Metodi di filtraggio per le reservations
+        public async Task<Reservation[]> SearchReservationsByDate(DateTime startDate, DateTime endDate)
+        {
+            return await ReservationRepository.SearchReservationsByDate(startDate, endDate);
+        }
+
+        public async Task<Reservation[]> SearchReservationsByField(string queryStringField)
+        {
+            return await ReservationRepository.SearchReservationsByField(queryStringField);
+        }
+
+        public async Task<Reservation[]> SearchReservationsByMember(string queryStringMember)
+        {
+            return await ReservationRepository.SearchReservationsByMember(queryStringMember);
+        }
+
     }
 }

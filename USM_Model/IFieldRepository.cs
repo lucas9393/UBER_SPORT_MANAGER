@@ -4,7 +4,7 @@ using System.Text;
 
 namespace USM_Model
 {
-    interface IFieldRepository
+    public interface IFieldRepository
     {
 
     }
